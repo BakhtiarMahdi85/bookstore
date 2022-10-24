@@ -1,0 +1,9 @@
+from django.shortcuts import render
+from django.views import generic
+from .form import CustomUserCreationForm
+from django.urls import reverse_lazy
+
+class Signupwive(generic.CreateView):
+    form_class =CustomUserCreationForm
+    template_name = 'registration/signup.html'
+    success_url = reverse_lazy('login')
