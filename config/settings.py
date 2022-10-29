@@ -37,8 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+       #my app
     'bookaccount',
-    'pages'
+    'pages',
+    'crispy_forms'
+
+
 ]
 
 MIDDLEWARE = [
@@ -126,3 +130,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'bookaccount.CustomUser'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+# Email config
+EMAIL_BACKEND ='django.core.mail.backends.console.EmailBackend'
